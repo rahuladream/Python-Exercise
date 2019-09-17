@@ -10,7 +10,7 @@ def power(num, pwr):
 
 def factorial(num):
     if (num == 0):
-        return None
+        return 1
     else:
         res = num * (num - 1)
         return res
@@ -18,3 +18,4 @@ def factorial(num):
 
 print("{} to the power of {} is {}".format(2,4, power(2,4)))
 print("{}! is {}".format(4, factorial(4)))
+print("{}! is {}".format(0, factorial(0)))
