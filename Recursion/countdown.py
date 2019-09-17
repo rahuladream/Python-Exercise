@@ -10,6 +10,10 @@ def countdown(x):
         print("Completed")
     else:
         print(x)
-        return countdown(x-1)
-
-countdown(5)
+        countdown(x-1)
+        # what happen to the down code
+        print("bar..")
+        # The function will return to The
+        # original stack that means it will
+        # run 5 times to return original stack
+countdown(15)
