@@ -12,14 +12,28 @@ from pygame.locals import (
 	K_q
 	)
 
-# Initialize the game
-pygame.init()
 
 # Define the screen width and height
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
 
+	# Define a player object by extending pygame.sprite.Sprite
+	# The surface drawn on the screen is now an attribute of 'player'
+
+class Player(pygame.sprite.Sprite):
+	def __init__(self):
+		super(Player, self).__init__()
+		self.surf = pygame.Surface((75, 75))
+		self.surf.fill((255,255,255))
+		self.rect = self.surf.get_rect()
+
+# Initialize the pygame
+pygame.init()
+
 screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
+
+# Inititate player
+player = Player()
 
 # Variable a keep the main loop running
 running = True
@@ -35,26 +49,10 @@ while running:
 		elif event.type == QUIT:
 			running = False
 
-	# FIll the screen with color
-	screen.fill((255,255,255))
-
-	# Create surface and pass the tuple containing it's length and width
-	surf = pygame.Surface((50, 50))
-
 	# GIve the surface a color to seprate it from background
-	surf.fill((0,0,0))
-	rect = surf.get_rect()
+	screen.fill((0,0,0))
 
 	# Draw surf onto the screen at the center
-	screen.blit(surf, (SCREEN_WIDTH/2 , SCREEN_HEIGHT/2))
+	screen.blit(player.surf, (SCREEN_WIDTH/2 , SCREEN_HEIGHT/2))
 	pygame.display.flip()
 
-	# Put the center of surf at the center of the display
-	surf_center = (
-		(SCREEN_WIDTH - surf.get_width()) / 2,
-		(SCREEN_HEIGHT - surf.get_height()) / 2
-	)
-
-	# Draw surf at the new coordinates
-	screen.blit(surf, surf_center)
-	pygame.display.flip()
