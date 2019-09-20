@@ -10,7 +10,7 @@ from pygame.locals import (
 	KEYDOWN,
 	QUIT,
 	K_q
-)
+	)
 
 # Initialize the game
 pygame.init()
@@ -50,3 +50,11 @@ while running:
 	pygame.display.flip()
 
 	# Put the center of surf at the center of the display
+	surf_center = (
+		(SCREEN_WIDTH - surf.get_width()) / 2,
+		(SCREEN_HEIGHT - surf.get_height()) / 2
+	)
+
+	# Draw surf at the new coordinates
+	screen.blit(surf, surf_center)
+	pygame.display.flip()
