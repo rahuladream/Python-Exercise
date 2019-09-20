@@ -11,3 +11,17 @@ No scorekeeping
 No player attack capabilities
 No advancing levels
 No boss characters
+
+
+SETTING UP THE GAME LOOP
+
+The game loop does four very important things:
+
+1. Processes user input
+2. Updates the state of all game objects
+3. Updates the display and audio output
+4. Maintains the speed of the game
+
+
+FRAME:
+Every cycle of the game loop is called a frame, and the quicker you can do things each cycle, the faster your game will run. Frames continue to occur until some condition to exit the game is met.
