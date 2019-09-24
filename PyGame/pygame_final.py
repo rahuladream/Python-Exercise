@@ -49,10 +49,26 @@ while running:
 		elif event.type == QUIT:
 			running = False
 
+	pressed_keys = pygame.get_pressed()
+
+
+	def update(self, pressed_keys):
+    		
+    	
+    	if pressed_keys[K_UP]:
+    			
+    		self.rect.move_ip(0, -5)
+		if pressed_keys[K_DOWN]:
+    		self.rect.move_ip(0, 5)
+		if pressed_keys[K_LEFT]:
+    		self.rect.move_ip(-5, 0)
+		if pressed_keys[K_RIGHT]:
+    		self.rect.move_ip(5, 0)
+
 	# GIve the surface a color to seprate it from background
 	screen.fill((0,0,0))
 
 	# Draw surf onto the screen at the center
-	screen.blit(player.surf, (SCREEN_WIDTH/2 , SCREEN_HEIGHT/2))
+	screen.blit(player.surf, player.rect)
 	pygame.display.flip()
 
