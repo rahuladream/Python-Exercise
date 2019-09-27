@@ -1,5 +1,13 @@
 """
 A polygon is a closed figure with 3 or more sides. Say we have a class called Polygen
+
+
+isinstance() and issubclass() are use to check inheritance.
+
+Function isinstance() returns True if the object is an instance of the class or other classes derived from it.
+
+
+Function issubclass() is used to check for the class inheritance
 """
 
 class Polygen:
