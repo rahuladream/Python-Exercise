@@ -23,3 +23,25 @@ def divide(a,b):
 print(divide(2,5))
 
 print(divide(2,0))
+
+
+
+def star(func):
+	def inner(*args, **kwargs):
+		print("*" * 30)
+		func(*args, **kwargs)
+		print("*" * 30)
+	return inner
+
+def percent(func):
+	def inner(*args, **kwargs):
+		print("%" * 30)
+		func(*args, **kwargs)
+		print("%" * 30)
+	return inner
+
+@star
+@percent
+def printer(msg):
+	print(msg)
+printer("Hello")
