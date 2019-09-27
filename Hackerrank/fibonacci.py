@@ -13,4 +13,9 @@ def fibonacci(n):
 	return fib
 if __name__ == '__main__':
     n = int(input())
-    print(list(map(cube, fibonacci(n))))
+    if n == 0:
+    	print("")
+    elif n == 1:
+    	print(0)
+    else:
+    	print(list(map(cube, fibonacci(n))))
