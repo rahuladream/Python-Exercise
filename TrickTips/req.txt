@@ -1,0 +1,13 @@
+attrs==19.1.0
+beautifulsoup4==4.8.0
+bs4==0.0.1
+certifi==2019.9.11
+chardet==3.0.4
+idna==2.7
+money-parser==0.0.1
+notify-run==0.0.12
+price-parser==0.2.4
+PyQRCode==1.2.1
+requests==2.20.0
+soupsieve==1.9.4
+urllib3==1.24.3
