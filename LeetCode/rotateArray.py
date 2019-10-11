@@ -9,4 +9,4 @@ class Solution:
 		return nums[-k:] + nums[:-k]
 
 a = Solution()
-print(a.rotate([-1,-100,3,99], 2))
+print(a.rotate([-1,-100,3,99], 2)) 
