@@ -29,7 +29,6 @@ def main():
 	for val in text:
 		if line == 0:
 			new_txt.append(val)
-			print(line)
 		else:
 			x, y, z, a = val.split(',')
 			if x == 'Rohit':
@@ -37,9 +36,9 @@ def main():
 			else:
 				new_txt.append(val)
 		line += 1
-
 	x = open('output.csv', "w")
 	x.writelines(new_txt)
 	x.close()
 
-print(main())
+if __name__ == '__main__':
+	main()
